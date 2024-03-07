@@ -15,7 +15,7 @@ header {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(1, 1fr); /* Display one movie per row */
     grid-gap: 20px;
     padding: 20px;
     justify-content: center;
@@ -46,8 +46,8 @@ header {
 .filmes img {
     margin-top: 10px;
     border-radius: 8px;
-    width: 200px;
-    height: 300px;
+    width: 200px; /* Adjust width as needed */
+    height: auto;
     object-fit: cover;
 }
 
@@ -57,13 +57,8 @@ header {
     text-align: center;
 }
 
-.numbered-paragraph {
-    margin: 10px 0;
-    counter-increment: paragraph-counter;
-}
-
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid for larger screens */
     }
 }
