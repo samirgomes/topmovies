@@ -57,6 +57,11 @@ header {
     text-align: center;
 }
 
+.numbered-paragraph {
+    margin: 10px 0;
+    counter-increment: paragraph-counter;
+}
+
 @media (max-width: 768px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
